@@ -1,0 +1,28 @@
+{
+  "name": "Master Auto",
+  "slug": "master-auto",
+  "category": "auto repair",
+  "demo": true,
+  "theme": "industrial",
+  "tagline": "Good hands.\nBack on the road.",
+  "about": "Auto repair on Gallows Road in Falls Church, inside the Shell station. Customers highlight honest advice, competitive prices, and quick service.",
+  "phone": "(703) 321-3161",
+  "address": "3051 Gallows Rd, Falls Church, VA 22042",
+  "city": "Falls Church, VA",
+  "locationNote": "Inside the Shell station · Gallows Road",
+  "hours": { "Monday": "8 AM–6 PM", "Tuesday": "8 AM–6 PM", "Wednesday": "8 AM–6 PM", "Thursday": "8 AM–6 PM", "Friday": "8 AM–6 PM", "Saturday": "8 AM–2 PM", "Sunday": "Closed" },
+  "services": [{ "name": "AC work" }, { "name": "State inspection" }, { "name": "Brake pads & rotors" }, { "name": "Oil change" }, { "name": "Tire patching" }],
+  "rating": 4.8,
+  "reviewCount": 192,
+  "reviews": [
+    { "author": "Gin A.", "text": "It saved me 1000$ and I’m very happy for their honesty." },
+    { "author": "M C.", "text": "Great mechanics, competitive prices, and quick service." },
+    { "author": "Amanda H.", "text": "This little place is a hidden gem, super honest and reasonably priced which is rare these days." },
+    { "author": "Ryan B.", "text": "It’s clear they take extreme pride in their craft and are good people to boot." }
+  ],
+  "photos": ["img/photo-1.jpg", "img/photo-2.jpg", "img/photo-3.jpg", "img/photo-4.jpg", "img/photo-5.jpg"],
+  "photoAlts": ["Master Auto garage and signage", "Engine work inside the Master Auto garage", "Vehicle on a lift in the garage", "Exterior service bay at Master Auto", "Master Auto entrance and signage"],
+  "mapsQuery": "Master Auto, 3051 Gallows Rd, Falls Church, VA 22042",
+  "maps_url": "https://www.google.com/maps/place/Master+Auto/data=!4m7!3m6!1s0x89b64d15fdc57e1b:0x22da72671904bf60!8m2!3d38.8671103!4d-77.2270203!16s%2Fg%2F1w2y_b6_!19sChIJG37F_RVNtokRYL8EGWdy2iI?authuser=0&hl=en&g_ep=EgoyMDI2MTExOC4xIJJjKgBIAVAD&rclk=1",
+  "outreachPraise": "your honesty"
+}

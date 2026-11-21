@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { renderPremium, personalText, themes } from './premium.js';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULT_BASE = 'https://nepaliterminal.github.io/local-shop-sites';
@@ -13,6 +14,8 @@ const presets = {
   salon: { label: 'Salon', accent: '#89525f', icon: '✧', tagline: 'A little time for yourself.', about: 'Thoughtful care and a personal touch, so you leave feeling your best.', service: 'Our services', eyebrow: 'Your moment to unwind.', action: 'Make time for you.' },
   'auto repair': { label: 'Auto repair', accent: '#35646c', icon: '⚙', tagline: 'Good hands. Honest service.', about: 'Straightforward help to keep you and your vehicle moving.', service: 'How we can help', eyebrow: 'Local care. Every mile.', action: 'Let’s get you moving.' },
   cleaning: { label: 'Cleaning', accent: '#3e7062', icon: '✧', tagline: 'A fresh space. A clearer day.', about: 'Careful, reliable cleaning with attention to the little things.', service: 'Cleaning services', eyebrow: 'A little more peace of mind.', action: 'Come home to clean.' },
+  tailor: { label: 'Tailoring & dry cleaning', accent: '#786334', icon: '◇', tagline: 'The difference is in the details.', about: 'Tailoring and garment care in your neighborhood.', service: 'Garment care', eyebrow: 'Fit. Finish. Care.', action: 'Let’s find your perfect fit.' },
+  'food truck': { label: 'Food truck', accent: '#ac351e', icon: '◒', tagline: 'Your next favorite bite.', about: 'Find your next neighborhood food stop.', service: 'Food favorites', eyebrow: 'Follow your appetite.', action: 'Hungry? Come find us.' },
   generic: { label: 'Local business', accent: '#53664e', icon: '✦', tagline: 'Your neighborhood. Our passion.', about: 'Personal service, a friendly welcome, and care in everything we do.', service: 'What we do', eyebrow: 'Independent. Local. Here for you.', action: 'We’d love to meet you.' }
 };
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -28,7 +31,7 @@ export function normalize(raw, source = 'Business') {
   for (const key of ['services', 'reviews', 'photos']) {
     if (raw[key] != null && !Array.isArray(raw[key])) throw new Error(`${source}: ${key} must be an array`);
   }
-  for (const key of ['category', 'tagline', 'about', 'phone', 'address', 'city', 'accent', 'mapsQuery']) {
+  for (const key of ['category', 'tagline', 'about', 'phone', 'address', 'city', 'accent', 'mapsQuery', 'maps_url', 'theme', 'locationNote', 'outreachPraise', 'outreachName']) {
     if (raw[key] != null && typeof raw[key] !== 'string') throw new Error(`${source}: ${key} must be a string`);
   }
   if (raw.hours != null && (typeof raw.hours !== 'object' || Array.isArray(raw.hours))) throw new Error(`${source}: hours must be an object`);
@@ -37,8 +40,12 @@ export function normalize(raw, source = 'Business') {
   if (raw.reviews?.some(r => !r || typeof r.text !== 'string' || !r.text.trim() || typeof r.author !== 'string' || !r.author.trim())) throw new Error(`${source}: reviews need text and author; use only verified real reviews`);
   if (raw.rating != null && (typeof raw.rating !== 'number' || raw.rating < 1 || raw.rating > 5 || !Number.isFinite(raw.rating))) throw new Error(`${source}: rating must be between 1 and 5`);
   if (raw.reviewCount != null && (!Number.isInteger(raw.reviewCount) || raw.reviewCount < 1)) throw new Error(`${source}: reviewCount must be a positive integer`);
-  if (raw.photos?.some(p => typeof p !== 'string' || !safeURL(p))) throw new Error(`${source}: photos must be http(s) URLs`);
-  for (const key of ['demo', 'sample']) if (raw[key] != null && typeof raw[key] !== 'boolean') throw new Error(`${source}: ${key} must be true or false`);
+  if (raw.photos?.some(p => typeof p !== 'string' || (!safeURL(p) && !/^img\/[a-z0-9-]+\.(jpg|jpeg|png|webp)$/.test(p)))) throw new Error(`${source}: photos must be http(s) URLs or safe img/ filenames`);
+  if (raw.photoAlts != null && (!Array.isArray(raw.photoAlts) || raw.photoAlts.some(a => typeof a !== 'string'))) throw new Error(`${source}: photoAlts must be an array of strings`);
+  if (raw.maps_url != null && !safeURL(raw.maps_url)) throw new Error(`${source}: maps_url must be an http(s) URL`);
+  if (raw.theme != null && !themes.includes(raw.theme)) throw new Error(`${source}: unknown theme`);
+  if (raw.outreachPraise && !raw.rating) throw new Error(`${source}: personalized outreach requires a verified rating`);
+  for (const key of ['demo', 'sample', 'unclaimed']) if (raw[key] != null && typeof raw[key] !== 'boolean') throw new Error(`${source}: ${key} must be true or false`);
   const preset = Object.hasOwn(presets, raw.category) ? presets[raw.category] : presets.generic;
   return { ...raw, name: raw.name.trim(), preset, tagline: raw.tagline || preset.tagline, about: raw.about || preset.about, accent: /^#[0-9a-f]{6}$/i.test(raw.accent || '') ? raw.accent : preset.accent, services: raw.services || [], reviews: raw.reviews || [], photos: raw.photos || [], hours: raw.hours || {} };
 }
@@ -50,6 +57,7 @@ const css = `
 `;
 
 export function render(b, base) {
+  if (b.maps_url && !b.sample) return renderPremium(b, base);
   const { preset: p } = b;
   const url = `${base}/${b.slug}/`;
   const query = b.mapsQuery || [b.address, b.city].filter(Boolean).join(', ');
@@ -88,6 +96,11 @@ export function build({ root = ROOT, base = process.env.PAGES_BASE || DEFAULT_BA
     try { return normalize(JSON.parse(fs.readFileSync(path.join(input, file), 'utf8')), file); } catch (error) { throw new Error(`${file}: ${error.message}`); }
   });
   if (new Set(businesses.map(b => b.slug)).size !== businesses.length) throw new Error('Duplicate business slug; each slug must be unique');
+  for (const b of businesses) {
+    for (const photo of b.photos.filter(p => p.startsWith('img/'))) {
+      if (!fs.existsSync(path.join(root, 'assets', b.slug, photo))) throw new Error(`${b.slug}: missing local photo assets/${b.slug}/${photo}`);
+    }
+  }
   // Validate all input before replacing the generated output directory.
   const output = path.join(root, 'docs');
   fs.rmSync(output, { recursive: true, force: true });
@@ -95,12 +108,16 @@ export function build({ root = ROOT, base = process.env.PAGES_BASE || DEFAULT_BA
   fs.writeFileSync(path.join(output, '.nojekyll'), '');
   for (const business of businesses) {
     fs.mkdirSync(path.join(output, business.slug));
+    for (const photo of business.photos.filter(p => p.startsWith('img/'))) {
+      fs.mkdirSync(path.join(output, business.slug, 'img'), { recursive: true });
+      fs.copyFileSync(path.join(root, 'assets', business.slug, photo), path.join(output, business.slug, photo));
+    }
     fs.writeFileSync(path.join(output, business.slug, 'index.html'), render(business, base));
     log(`Built docs/${business.slug}/index.html${business.sample ? ' (fictional sample)' : ''}`);
   }
   fs.writeFileSync(path.join(output, 'index.html'), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Neighborhood websites · Demo collection</title><style>body{background:#f6f4ed;color:#262923;font:16px/1.6 Arial,sans-serif;max-width:900px;margin:70px auto;padding:0 24px}h1{font:52px/1.1 Georgia,serif;letter-spacing:-2px}p{color:#66695f}ul{list-style:none;padding:0;margin-top:40px}li{border-top:1px solid #deded3;padding:25px 0}a{color:inherit;font:28px Georgia,serif;text-underline-offset:6px}small{display:block;margin-top:10px;color:#66695f}.label{font-size:11px;text-transform:uppercase;letter-spacing:2px}</style></head><body><p class="label">Independent businesses. Thoughtful websites.</p><h1>A little local.<br>A lot of possibility.</h1><p>A collection of website previews, built by Abhinav.<br>Samples are fictional; other previews are unofficial until approved by the owner.</p><ul>${businesses.map(b => `<li><a href="./${b.slug}/">${esc(b.name)} ↗</a><small>${esc(b.preset.label)} · ${esc(b.city || 'Local business')}${b.sample ? ' · FICTIONAL SAMPLE' : ' · Website preview'}</small></li>`).join('') || '<li>No demos yet. Add a business JSON file and rebuild.</li>'}</ul></body></html>\n`);
   fs.mkdirSync(path.join(root, 'outreach'), { recursive: true });
-  const messages = businesses.map(b => `${b.name}${b.sample ? ' [FICTIONAL SAMPLE — DO NOT SEND]' : ''}\n${firstText(b.name, `${base}/${b.slug}/`)}\n`).join('\n');
+  const messages = businesses.map(b => `${b.name}${b.sample ? ' [FICTIONAL SAMPLE — DO NOT SEND]' : ''}\n${b.outreachPraise ? personalText(b, `${base}/${b.slug}/`) : firstText(b.name, `${base}/${b.slug}/`)}\n`).join('\n');
   fs.writeFileSync(path.join(root, 'outreach', 'messages.txt'), messages);
   log(`Generated docs/index.html, docs/.nojekyll, outreach/messages.txt`);
   log(`Done: ${businesses.length} site(s). Pages base: ${base}`);

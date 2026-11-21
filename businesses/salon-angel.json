@@ -1,0 +1,27 @@
+{
+  "name": "Salon Angel",
+  "slug": "salon-angel",
+  "category": "salon",
+  "theme": "editorial",
+  "demo": true,
+  "tagline": "A little change.\nA beautiful feeling.",
+  "about": "A hair salon on Lee Highway in Fairfax. From balayage to a fresh haircut, customers celebrate the color, the attention to detail, and the warm welcome.",
+  "phone": "(703) 891-0099",
+  "address": "8630 Lee Hwy F, Fairfax, VA 22031",
+  "city": "Fairfax, VA",
+  "hours": { "Monday": "Closed", "Tuesday": "9:30 AM–7 PM", "Wednesday": "9:30 AM–7 PM", "Thursday": "9:30 AM–7 PM", "Friday": "9:30 AM–7 PM", "Saturday": "9 AM–6 PM", "Sunday": "11 AM–5 PM" },
+  "services": [{ "name": "Balayage" }, { "name": "Haircuts" }, { "name": "Hair color" }, { "name": "Highlights" }],
+  "rating": 5.0,
+  "reviewCount": 45,
+  "reviews": [
+    { "author": "Bb B.", "text": "My hair looks so soft, shiny, and healthy, and the color came out gorgeous!" },
+    { "author": "Karima D.", "text": "The salon is so chic, stylish, and welcoming, and everyone was super friendly." },
+    { "author": "Zury V.", "text": "The staff made me feel so comfortable and confident throughout the entire process." },
+    { "author": "Nicci N.", "text": "Angel did an amazing job with my balayage and haircut! This is hands down the best hair color and style I’ve ever had." }
+  ],
+  "photos": ["img/photo-1.jpg", "img/photo-2.jpg"],
+  "photoAlts": ["Long wavy hair photographed at Salon Angel", "Finished hairstyle photographed at Salon Angel"],
+  "mapsQuery": "Salon Angel, 8630 Lee Hwy F, Fairfax, VA 22031",
+  "maps_url": "https://www.google.com/maps/place/Salon+Angel/data=!4m7!3m6!1s0x89b64b0032bbbbef:0x5693ed1a9b5ab386!8m2!3d38.873772!4d-77.2440659!16s%2Fg%2F11yzw3fc4v!19sChIJ77u7MgBLtokRhrNamxrtk1Y?authuser=0&hl=en&g_ep=EgoyMDI2MTExOC4xIJJjKgBIAVAD&rclk=1",
+  "outreachPraise": "your balayage"
+}

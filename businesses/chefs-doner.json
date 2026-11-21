@@ -1,0 +1,27 @@
+{
+  "name": "Chef's Doner",
+  "slug": "chefs-doner",
+  "category": "food truck",
+  "theme": "streetfood",
+  "demo": true,
+  "tagline": "Your next\nfavorite bite.",
+  "about": "Döner, İskender kebab, and kumpir on Gallows Road. A Dunn Loring food truck that customers praise for flavorful beef, fresh bread, and friendly service.",
+  "phone": "(703) 928-2129",
+  "address": "2210 Gallows Rd, Dunn Loring, VA 22027",
+  "city": "Dunn Loring, VA",
+  "hours": {},
+  "services": [{ "name": "Döner sandwich" }, { "name": "İskender kebab" }, { "name": "Berlin-style beef döner" }, { "name": "Kumpir" }, { "name": "Fries" }],
+  "rating": 4.9,
+  "reviewCount": 182,
+  "reviews": [
+    { "author": "Arnold", "text": "This is a great food truck around the corner from my work!" },
+    { "author": "Elaheh M.", "text": "We had the İskender kebab and the Berlin-style beef döner, and both were incredible." },
+    { "author": "Aymen M.", "text": "The beef was flavorful and the bread was fresh and honestly one of my favorite parts." },
+    { "author": "Akmal B.", "text": "One of the best places to get kumpir in the area." }
+  ],
+  "photos": ["img/photo-1.jpg", "img/photo-2.jpg"],
+  "photoAlts": ["Chef's Doner food truck on Gallows Road", "Menu photographs displayed on the Chef's Doner truck"],
+  "mapsQuery": "Chef's Doner, 2210 Gallows Rd, Dunn Loring, VA 22027",
+  "maps_url": "https://www.google.com/maps/place/Chef%27s+Doner/data=!4m7!3m6!1s0x89b64b8f3d7cc011:0x4b3774d405855803!8m2!3d38.900914!4d-77.2240425!16s%2Fg%2F11z62dkqj0!19sChIJEcB8PY9LtokRA1iFBdR0N0s?authuser=0&hl=en&g_ep=EgoyMDI2MTExOC4xIJJjKgBIAVAD&rclk=1",
+  "outreachPraise": "your fresh döner bread"
+}

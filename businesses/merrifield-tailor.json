@@ -1,0 +1,28 @@
+{
+  "name": "Merrifield Tailor & Organic Dry Clean",
+  "slug": "merrifield-tailor",
+  "category": "tailor",
+  "theme": "classic",
+  "demo": true,
+  "tagline": "The difference\nis in the details.",
+  "about": "Tailoring and dry cleaning on Strawberry Lane in Falls Church. Customers praise the careful fit, personal attention, and thoughtful service.",
+  "phone": "(703) 698-1032",
+  "address": "8190 Strawberry Ln, Falls Church, VA 22042",
+  "city": "Falls Church, VA",
+  "hours": { "Monday": "8 AM–7 PM", "Tuesday": "8 AM–7 PM", "Wednesday": "8 AM–5 PM", "Thursday": "Closed", "Friday": "8 AM–7 PM", "Saturday": "9 AM–5 PM", "Sunday": "10 AM–4 PM" },
+  "services": [{ "name": "Suit alterations" }, { "name": "Pants hemming" }, { "name": "Jacket sleeve alterations" }, { "name": "Dress alterations" }, { "name": "Dry cleaning" }, { "name": "Regular wash" }],
+  "rating": 4.6,
+  "reviewCount": 142,
+  "reviews": [
+    { "author": "Stephen O.", "text": "The shoulders are much more comfortable, and the fit looks great." },
+    { "author": "Moises C.", "text": "I have done dry cleaning, regular wash and tailoring and all are great." },
+    { "author": "Christina P.", "text": "The ladies are always incredibly friendly, kind, helpful, and efficient." },
+    { "author": "Aida A.", "text": "The combination of quality workmanship, personal attention, and friendly service is why I’ve continued coming back for nine years." }
+  ],
+  "photos": ["img/photo-1.jpg", "img/photo-2.jpg"],
+  "photoAlts": ["Merrifield Tailor storefront on Strawberry Lane", "Interior of Merrifield Tailor and Organic Dry Clean"],
+  "mapsQuery": "Merrifield Tailor & Organic Dry Clean, 8190 Strawberry Ln, Falls Church, VA 22042",
+  "maps_url": "https://www.google.com/maps/place/Merrifield+Tailor+%26+Organic+Dry+Clean/data=!4m7!3m6!1s0x89b64b64c36b355d:0x1cb8c0e3fc9041b7!8m2!3d38.8726145!4d-77.2283429!16s%2Fg%2F1tk6r65j!19sChIJXTVrw2RLtokRt0GQ_OPAuBw?authuser=0&hl=en&g_ep=EgoyMDI2MTExOC4xIJJjKgBIAVAD&rclk=1",
+  "outreachName": "Merrifield Tailor",
+  "outreachPraise": "your careful tailoring"
+}
