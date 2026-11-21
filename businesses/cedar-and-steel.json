@@ -1,0 +1,31 @@
+{
+  "name": "Cedar & Steel",
+  "slug": "cedar-and-steel",
+  "category": "barber",
+  "sample": true,
+  "demo": true,
+  "tagline": "Good cuts. Better company.",
+  "about": "A fresh fade, a classic cut, or a little time in the chair. A neighborhood barbershop with an old-school soul and an eye for the details.",
+  "phone": "(503) 555-0142",
+  "address": "123 Example Lane",
+  "city": "Portland, OR",
+  "hours": {
+    "Monday": "Closed",
+    "Tuesday": "9 AM – 6 PM",
+    "Wednesday": "9 AM – 6 PM",
+    "Thursday": "9 AM – 7 PM",
+    "Friday": "9 AM – 7 PM",
+    "Saturday": "9 AM – 5 PM",
+    "Sunday": "10 AM – 3 PM"
+  },
+  "services": [
+    { "name": "The classic cut", "price": "$30", "description": "A tailored cut, finished with a clean neckline and a little attention to detail." },
+    { "name": "Skin fade", "price": "$35", "description": "Clean lines. Seamless blends. A fresh look from every angle." },
+    { "name": "Beard trim & shape", "price": "$20", "description": "A little structure, a sharp outline, and a beard that feels like you." },
+    { "name": "Cut + beard", "price": "$45", "description": "The full refresh. A signature cut paired with a tailored beard trim." }
+  ],
+  "reviews": [],
+  "photos": ["https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=85"],
+  "accent": "#a64b2c",
+  "mapsQuery": "Portland Oregon"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Solcito Tacos",
+  "slug": "solcito-tacos",
+  "category": "restaurant",
+  "sample": true,
+  "demo": true,
+  "tagline": "A little sunshine. In every taco.",
+  "about": "Warm tortillas, bright salsas, and something slow-cooked with love. Your little neighborhood stop for big flavor and good company.",
+  "phone": "(512) 555-0168",
+  "address": "456 Sample Street",
+  "city": "Austin, TX",
+  "hours": {
+    "Monday": "Closed", "Tuesday": "11 AM – 8 PM", "Wednesday": "11 AM – 8 PM", "Thursday": "11 AM – 8 PM", "Friday": "11 AM – 9 PM", "Saturday": "10 AM – 9 PM", "Sunday": "10 AM – 4 PM"
+  },
+  "services": [
+    { "name": "Al pastor", "price": "$4", "description": "Marinated pork, pineapple, onion, and cilantro on a warm corn tortilla." },
+    { "name": "Carne asada", "price": "$4.50", "description": "Grilled steak, fresh onion, cilantro, and a squeeze of lime." },
+    { "name": "Roasted mushroom", "price": "$4", "description": "Smoky mushrooms, avocado, pickled onion, and salsa verde." },
+    { "name": "The sunshine plate", "price": "$13", "description": "Your choice of three tacos with rice, beans, and house salsa." },
+    { "name": "Chips & guacamole", "price": "$6", "description": "Crisp tortilla chips and freshly mashed avocado. Made for sharing." },
+    { "name": "Agua fresca", "price": "$3", "description": "A rotating fruit refresher. Ask about today’s flavor." }
+  ],
+  "reviews": [],
+  "photos": ["https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1200&q=85"],
+  "accent": "#ab4627",
+  "mapsQuery": "Austin Texas"
+}
