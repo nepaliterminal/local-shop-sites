@@ -1,0 +1,72 @@
+{
+  "slug": "diva-beauty-lounge",
+  "name": "Diva Beauty Lounge",
+  "category": "salon",
+  "theme": "editorial",
+  "tagline": "Nails that last.\nCare you feel.",
+  "about": "A nail and beauty lounge on Blenheim Boulevard in Fairfax City. Clients praise the Russian manicures that stay perfect for weeks, detailed brow and lash work, and a genuinely kind team.",
+  "phone": "(703) 389-6227",
+  "address": "3929 Blenheim Blvd #91c, Fairfax, VA 22030",
+  "city": "Fairfax, VA",
+  "locationNote": "Appointments recommended",
+  "themeCopy": {
+    "icon": "✦",
+    "kicker": "Nails, brows & lashes",
+    "label": "Russian manicures & pedicures"
+  },
+  "services": [
+    {
+      "name": "Russian manicures"
+    },
+    {
+      "name": "Gel & hard gel overlays"
+    },
+    {
+      "name": "Pedicures"
+    },
+    {
+      "name": "Brow shaping & tinting"
+    },
+    {
+      "name": "Lash services"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Christie B.",
+      "text": "Everyone has been so kind and talented. The level of attention and detail is unlike any salon I’ve ever been to."
+    },
+    {
+      "author": "Meri P.",
+      "text": "They do amazing Russian manicure and pedicure, creating very thin, natural-looking nails with long-lasting results and no lifting."
+    },
+    {
+      "author": "Madison M.",
+      "text": "My coworker recommended this place about a year ago and I drive all the way from DC to go here! It is so worth it though."
+    }
+  ],
+  "photoAlts": [
+    "Sparkle gel manicure shared on the Diva Beauty Lounge listing",
+    "Natural sheer manicure shared on the Diva Beauty Lounge listing"
+  ],
+  "demo": true,
+  "hours": {
+    "Monday": "10 AM–7 PM",
+    "Tuesday": "10 AM–7 PM",
+    "Wednesday": "10 AM–7 PM",
+    "Thursday": "10 AM–7 PM",
+    "Friday": "10 AM–7 PM",
+    "Saturday": "10 AM–7 PM",
+    "Sunday": "9 AM–7 PM"
+  },
+  "rating": 4.8,
+  "reviewCount": 142,
+  "maps_url": "https://www.google.com/maps/place/Diva+Beauty+Lounge+LLC/data=!4m7!3m6!1s0x89b64f1c961622cf:0xa9ed7a6c11931eca!8m2!3d38.8463278!4d-77.3015419!16s%2Fg%2F11w4m8zkvf!19sChIJzyIWlhxPtokRyh6TEWx67ak",
+  "mapsQuery": "Diva Beauty Lounge, 3929 Blenheim Blvd #91c, Fairfax, VA 22030",
+  "outreachName": "Diva Beauty Lounge",
+  "outreachPraise": "your long-lasting Russian manicures",
+  "photos": [
+    "img/photo-1.jpg",
+    "img/photo-2.jpg"
+  ]
+}

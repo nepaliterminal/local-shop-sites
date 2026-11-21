@@ -1,0 +1,79 @@
+{
+  "slug": "sherrys-tailoring",
+  "name": "Sherry’s Tailoring",
+  "category": "tailor",
+  "theme": "editorial",
+  "tagline": "Your dress,\nfitted like\na glove.",
+  "about": "Alterations and tailoring by appointment from Sherry’s home studio in Fairfax. Brides and guests praise her precise fit, quick turnarounds, and very reasonable prices.",
+  "phone": "(571) 331-1745",
+  "address": "11110 Byrd Dr, Fairfax, VA 22030",
+  "city": "Fairfax, VA",
+  "locationNote": "Home studio · By appointment only · Text to schedule",
+  "themeCopy": {
+    "icon": "✂",
+    "kicker": "Alterations & tailoring",
+    "services": "Made to fit you.",
+    "story": "Precise fit.\nPersonal care.",
+    "closing": "Let’s get the fit right.",
+    "label": "Wedding & special-occasion alterations",
+    "gallery": "Sherry’s work."
+  },
+  "services": [
+    {
+      "name": "Wedding dress alterations"
+    },
+    {
+      "name": "Bustles & bust cups"
+    },
+    {
+      "name": "Bridesmaid dress alterations"
+    },
+    {
+      "name": "Special-occasion dresses"
+    },
+    {
+      "name": "Hemming"
+    },
+    {
+      "name": "General tailoring"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Brittany L.",
+      "text": "Each dress fit me like a glove, and trust me, that is due to Sherry's incredible craftmanship."
+    },
+    {
+      "author": "Britney J.",
+      "text": "I texted Sherry, saw her that same day, and it was ready a few days later! The dress fits perfectly, she got it done quickly, and her prices are very reasonable."
+    },
+    {
+      "author": "Catherine R.",
+      "text": "She is incredibly responsive, professional, and genuinely takes the time to understand exactly what you want."
+    }
+  ],
+  "photoAlts": [
+    "Wedding dress fitting shared on the Sherry’s Tailoring listing",
+    "Sherry’s Tailoring by-appointment notice"
+  ],
+  "demo": true,
+  "hours": {
+    "Monday": "9 AM–5 PM",
+    "Tuesday": "9 AM–5 PM",
+    "Wednesday": "9 AM–5 PM",
+    "Thursday": "9 AM–5 PM",
+    "Friday": "9 AM–5 PM",
+    "Saturday": "9 AM–5 PM",
+    "Sunday": "Closed"
+  },
+  "rating": 4.9,
+  "reviewCount": 245,
+  "maps_url": "https://www.google.com/maps/place/Sherry%27s+Tailoring/data=!4m7!3m6!1s0x89b64efd4754cb09:0xbd245812bed2c1e0!8m2!3d38.8455805!4d-77.3310333!16s%2Fg%2F11hbnpy6qh!19sChIJCctUR_1OtokR4MHSvhJYJL0",
+  "mapsQuery": "Sherry’s Tailoring, 11110 Byrd Dr, Fairfax, VA 22030",
+  "outreachName": "Sherry",
+  "outreachPraise": "your wedding dress alterations and quick turnarounds",
+  "photos": [
+    "img/photo-1.jpg",
+    "img/photo-2.jpg"
+  ]
+}
