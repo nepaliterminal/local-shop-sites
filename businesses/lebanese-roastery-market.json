@@ -1,0 +1,57 @@
+{
+  "slug": "lebanese-roastery-market",
+  "name": "Lebanese Roastery & Market",
+  "category": "grocery",
+  "theme": "charcoal",
+  "tagline": "A little discovery.\nA lot to savor.",
+  "about": "Discover nuts, coffee, spices, halal sweets and pantry favorites at Brookfield Plaza in Springfield. Browse the shelves for something familiar or try something new — customers love the selection, generous samples and warm welcome.",
+  "phone": "(571) 251-3361",
+  "address": "7059 Brookfield Plaza, Springfield, VA 22150",
+  "city": "Springfield, VA",
+  "locationNote": "Brookfield Plaza · Nuts, coffee & specialty groceries",
+  "themeCopy": {
+    "icon": "✦",
+    "kicker": "Your neighborhood roastery & market",
+    "services": "Fill your pantry.\nFind a new favorite.",
+    "story": "Good things,\nworth discovering.",
+    "closing": "Something delicious awaits.",
+    "label": "Nuts, spices, sweets & coffee",
+    "gallery": "A look around the market"
+  },
+  "services": [
+    { "name": "Nuts & roasted seeds" },
+    { "name": "Coffee" },
+    { "name": "Spices & pantry staples" },
+    { "name": "Halal candies & gummies" },
+    { "name": "Nougat & sweets" },
+    { "name": "Labne & pita" }
+  ],
+  "reviews": [
+    { "author": "Abena Adjei", "text": "This market is amazing! They have a great selection of halal candy, spices, and pantry items." },
+    { "author": "Marisa P", "text": "I'm so happy I found this place! I visited for the first time today and was warmly welcomed with fresh coffee and had the chance to taste several delicious items." },
+    { "author": "Jeem Chowdhury", "text": "The shopkeepers are very friendly and even let you try the sample before you buy it. Its is a small shop but with quality products." }
+  ],
+  "photoAlts": [
+    "Assorted nuts and roasted snacks in bins at Lebanese Roastery & Market",
+    "Shelves and display counters inside the Springfield market",
+    "Colorful sweets and nougat displayed in the market",
+    "Lebanese Roastery & Market entrance at Brookfield Plaza"
+  ],
+  "demo": true,
+  "hours": {
+    "Monday": "Closed",
+    "Tuesday": "11 AM–7 PM",
+    "Wednesday": "11 AM–7 PM",
+    "Thursday": "11 AM–7 PM",
+    "Friday": "11 AM–7 PM",
+    "Saturday": "11 AM–7 PM",
+    "Sunday": "12 PM–6 PM"
+  },
+  "rating": 4.9,
+  "reviewCount": 115,
+  "maps_url": "https://www.google.com/maps/search/?api=1&query=Lebanese+Roastery+Market+7059+Brookfield+Plaza+Springfield+VA",
+  "mapsQuery": "Lebanese Roastery & Market, 7059 Brookfield Plaza, Springfield, VA 22150",
+  "outreachName": "Lebanese Roastery & Market",
+  "outreachPraise": "your welcoming service, fresh nuts and wide selection of sweets and spices",
+  "photos": ["img/photo-1.jpg", "img/photo-2.jpg", "img/photo-3.jpg", "img/photo-4.jpg"]
+}
