@@ -10,6 +10,14 @@ This template is under 320 characters (with literal placeholders). Generated mes
 
 `node build.js` generates `outreach/messages.txt` with the same copy for each business, using `PAGES_BASE`. Never send a message labeled FICTIONAL SAMPLE.
 
+### Personal first texts for verified listings
+
+The six real demos use a more personal version instead of the generic sample text. Each business JSON includes `outreachPraise` from its real reviews and a verified `rating`. The generator mentions both, the preview link, $200 one-time, payment only if they like it, and Cash App $absubedi. A short `outreachName` can make a long business name fit comfortably within 320 characters. The six messages are length-tested at the default Pages base; recheck length if using a longer base URL.
+
+Rolling Burrito's supplied listing was unclaimed: its message offers help claiming the Google listing. Do not imply we can claim it without the owner; Google verification must be completed by the authorized owner. Master Auto is inside a Shell station; its website explicitly notes that location.
+
+These personal first texts keep the initial ask brief. The **$200 still includes setup and one year of small edits**, as described below; confirm that scope before any payment. Listing ratings and counts are a snapshot, not live data — refresh them before sending. All six previews are unofficial until approved by the owner.
+
 ## One gentle follow-up
 
 Send once, several business days later, only if appropriate:

@@ -1,0 +1,27 @@
+{
+  "name": "Rolling Burrito",
+  "slug": "rolling-burrito",
+  "category": "food truck",
+  "theme": "fiesta",
+  "demo": true,
+  "tagline": "Big flavor.\nGood mood.",
+  "about": "A Mexican food truck on Lee Highway in Falls Church. Customers call out the birria tacos, flavorful burritos, and fast, friendly service.",
+  "phone": "(571) 288-2484",
+  "address": "7399 Lee Hwy Service Rd, Falls Church, VA 22042",
+  "city": "Falls Church, VA",
+  "hours": { "Monday": "11 AM–7:30 PM", "Tuesday": "11 AM–7:30 PM", "Wednesday": "11 AM–7:30 PM", "Thursday": "11 AM–7:30 PM", "Friday": "11 AM–7:30 PM", "Saturday": "11 AM–7:30 PM", "Sunday": "Closed" },
+  "services": [{ "name": "Birria tacos" }, { "name": "Chorizo taco" }, { "name": "Steak quesadilla" }, { "name": "Chicken burrito" }, { "name": "Chorizo burrito" }],
+  "rating": 4.9,
+  "reviewCount": 63,
+  "reviews": [
+    { "author": "Connor B.", "text": "The Birria tacos were perfect. I also had a chorizo taco which was delicious. My wife loved the steak quesadilla." },
+    { "author": "Shashank R.", "text": "The service was very fast and the lady was very helpful. The chicken and the chorizo were really really flavorful." },
+    { "author": "Christina S.", "text": "Pumping gas and looked behind me and delighted to see a burrito truck. Solid." }
+  ],
+  "photos": ["img/photo-1.jpg", "img/photo-2.jpg"],
+  "photoAlts": ["Loaded burrito bowl at Rolling Burrito", "Fresh toppings on a Rolling Burrito bowl"],
+  "mapsQuery": "Rolling Burrito, 7399 Lee Hwy Service Rd, Falls Church, VA 22042",
+  "maps_url": "https://www.google.com/maps/place/Rolling+Burrito/data=!4m7!3m6!1s0x89b64b5aa41a671f:0x7af35400b4709b19!8m2!3d38.8754933!4d-77.1990781!16s%2Fg%2F11t29nk1n9!19sChIJH2capFpLtokRGZtwtABU83o?authuser=0&hl=en&g_ep=EgoyMDI2MTExOC4xIJJjKgBIAVAD&rclk=1",
+  "outreachPraise": "your birria tacos",
+  "unclaimed": true
+}

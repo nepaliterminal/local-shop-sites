@@ -1,0 +1,27 @@
+{
+  "name": "Silk Road Grill",
+  "slug": "silk-road-grill",
+  "category": "restaurant",
+  "theme": "charcoal",
+  "demo": true,
+  "tagline": "Real charcoal.\nRich tradition.",
+  "about": "Afghan food on Arlington Boulevard in Falls Church. Customers come back for charcoal-grilled kabobs, Qabili Palaw, and generous portions.",
+  "phone": "(571) 740-7740",
+  "address": "6661 Arlington Blvd Service Rd, Falls Church, VA 22042",
+  "city": "Falls Church, VA",
+  "hours": {},
+  "services": [{ "name": "Charcoal kabobs" }, { "name": "Qabili Palaw" }, { "name": "Lamb" }, { "name": "Chicken" }, { "name": "Uzbek palaw" }, { "name": "Beef roll kabob" }],
+  "rating": 4.9,
+  "reviewCount": 43,
+  "reviews": [
+    { "author": "Ivan S.", "text": "Amazing food, really tasty, great quality. Best food I ate in a really long time." },
+    { "author": "Sameem A.", "text": "It was incredibly delicious, tender, and full of rich, smoky flavor from the charcoal grill." },
+    { "author": "Boykaro K.", "text": "I especially loved that they cook everything over real charcoal, unlike many other places that use propane grills." },
+    { "author": "Amo R.", "text": "The Qabili Palaw, tender lamb, flavorful kebabs, and juicy chicken were all outstanding." }
+  ],
+  "photos": ["img/photo-1.jpg", "img/photo-2.jpg"],
+  "photoAlts": ["Grilled meat and rice plate at Silk Road Grill", "Silk Road Grill exterior and food signage"],
+  "mapsQuery": "Silk Road Grill, 6661 Arlington Blvd Service Rd, Falls Church, VA 22042",
+  "maps_url": "https://www.google.com/maps/place/Silk+Road+Grill/data=!4m7!3m6!1s0x89b7b5bc802fbce1:0xad694af9dcbd3ca6!8m2!3d38.869317!4d-77.1743084!16s%2Fg%2F11zzv7tc3h!19sChIJ4bwvgLy1t4kRpjy93PlKaa0?authuser=0&hl=en&g_ep=EgoyMDI2MTExOC4xIJJjKgBIAVAD&rclk=1",
+  "outreachPraise": "your charcoal kabobs"
+}
