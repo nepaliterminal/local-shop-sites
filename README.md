@@ -111,8 +111,19 @@ The repository is published at https://nepaliterminal.github.io/local-shop-sites
 
 ## After payment / handoff
 
+Use the ready-to-paste [closing replies](outreach/replies.md) and [handoff checklist](outreach/handoff-checklist.md) for approval, payment, and launch.
+
+```sh
+node go-live.js salsa-verde --dry-run
+node go-live.js <slug> [edits.json]
+```
+
+Only run the real command after owner approval. It sets `demo: false`, removes the preview ribbon/noindex, retains the canonical URL from `PAGES_BASE` (default public base above), removes the shop from the demo gallery and outreach, and rebuilds locally. The collection stays noindex. No sitemap or robots.txt is generated. Commit and deploy the built files to publish. Fictional samples cannot be launched.
+
+Optional edits must be a JSON object; fields are shallow-merged, so `hours`, `services`, and `photos` replace the whole existing object/array. Allowed keys: `name`, `phone`, `hours`, `services`, `about`, `tagline`, `photos`, `photoAlts`, `photoPositions`, `address`, `city`, `mapsQuery`, `locationNote`. Unknown/protected keys are rejected; the existing validator and local photo checks run before writing. Put new local photos in `assets/<slug>/img/` first. `--dry-run` validates all input and prints field changes without writing anything. Run from any directory; edits filenames resolve from your current directory. Builds still replace all of `docs/`.
+
 - Agree in writing: **$200 one-time**, setup + one year of small edits from launch, payment only if they like it; Cash App **$absubedi**. Confirm receipt privately. Don’t put payment/customer records in the repo.
-- Have the owner approve all text, photos, hours, prices, and map location. Remove `demo` or set it to false in **their** JSON, then rebuild; the preview ribbon and demo noindex tag disappear. Leave fictional samples labeled as samples.
+- Have the owner approve all text, photos, hours, prices, and map location. Run `node go-live.js <slug>` for **their** JSON; the preview ribbon and demo noindex tag disappear. Leave fictional samples labeled as samples. Payment is due when the owner approves the final version and it goes live.
 - Give them the source and generated files; preferably move their site into a repository/account they own. For a standalone Pages repo, put their generated `index.html` at that repo’s configured publishing root. Update the build/output layout and canonical `PAGES_BASE` for a standalone deployment rather than leaving `/slug/` URLs pointing at this multi-demo collection.
 - Optional custom domain: register it in the owner’s registrar account at actual cost (about $12/year, varies), configure Pages **Custom domain**, and follow GitHub’s current DNS/verification instructions. Enable HTTPS after DNS propagates. A domain applies to a Pages repository, **not a single slug** — use a separate repo for one customer’s domain. If keeping this generator, adapt its output for that standalone root and preserve a `CNAME` file: this multi-demo build wipes `docs/`, including any manually added `CNAME`.
 - Give account access, renewal details, an export/backup, and an agreed way to request edits. Offer **$15/month optional updates after the included year**; never auto-enroll or double-bill.
