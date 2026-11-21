@@ -89,13 +89,13 @@ ${!b.sample && (b.reviews.length || b.rating) ? `<section class="wrap section" i
 </body></html>\n`;
 }
 
-export function build({ root = ROOT, base = process.env.PAGES_BASE || DEFAULT_BASE, log = console.log } = {}) {
+export function build({ root = ROOT, base = process.env.PAGES_BASE || DEFAULT_BASE, log = console.log, overrides = {}, validateOnly = false } = {}) {
   const parsedBase = new URL(base);
   if (!['http:', 'https:'].includes(parsedBase.protocol) || parsedBase.search || parsedBase.hash || parsedBase.username || parsedBase.password) throw new Error('PAGES_BASE must be an http(s) URL without credentials, query, or fragment');
   base = parsedBase.href.replace(/\/$/, '');
   const input = path.join(root, 'businesses');
   const businesses = fs.readdirSync(input).filter(f => f.endsWith('.json')).sort().map(file => {
-    try { return normalize(JSON.parse(fs.readFileSync(path.join(input, file), 'utf8')), file); } catch (error) { throw new Error(`${file}: ${error.message}`); }
+    try { return normalize(Object.hasOwn(overrides, file) ? overrides[file] : JSON.parse(fs.readFileSync(path.join(input, file), 'utf8')), file); } catch (error) { throw new Error(`${file}: ${error.message}`); }
   });
   if (new Set(businesses.map(b => b.slug)).size !== businesses.length) throw new Error('Duplicate business slug; each slug must be unique');
   for (const b of businesses) {
@@ -104,6 +104,8 @@ export function build({ root = ROOT, base = process.env.PAGES_BASE || DEFAULT_BA
     }
   }
   // Validate all input before replacing the generated output directory.
+  if (validateOnly) return businesses;
+  const previews = businesses.filter(b => b.demo || b.sample);
   const output = path.join(root, 'docs');
   fs.rmSync(output, { recursive: true, force: true });
   fs.mkdirSync(output, { recursive: true });
@@ -117,9 +119,9 @@ export function build({ root = ROOT, base = process.env.PAGES_BASE || DEFAULT_BA
     fs.writeFileSync(path.join(output, business.slug, 'index.html'), render(business, base));
     log(`Built docs/${business.slug}/index.html${business.sample ? ' (fictional sample)' : ''}`);
   }
-  fs.writeFileSync(path.join(output, 'index.html'), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Neighborhood websites · Demo collection</title><style>body{background:#f6f4ed;color:#262923;font:16px/1.6 Arial,sans-serif;max-width:900px;margin:70px auto;padding:0 24px}h1{font:52px/1.1 Georgia,serif;letter-spacing:-2px}p{color:#66695f}ul{list-style:none;padding:0;margin-top:40px}li{border-top:1px solid #deded3;padding:25px 0}a{color:inherit;font:28px Georgia,serif;text-underline-offset:6px}small{display:block;margin-top:10px;color:#66695f}.label{font-size:11px;text-transform:uppercase;letter-spacing:2px}</style></head><body><p class="label">Independent businesses. Thoughtful websites.</p><h1>A little local.<br>A lot of possibility.</h1><p>A collection of website previews, built by Abhinav.<br>Samples are fictional; other previews are unofficial until approved by the owner.</p><ul>${businesses.map(b => `<li><a href="./${b.slug}/">${esc(b.name)} ↗</a><small>${esc(b.preset.label)} · ${esc(b.city || 'Local business')}${b.sample ? ' · FICTIONAL SAMPLE' : ' · Website preview'}</small></li>`).join('') || '<li>No demos yet. Add a business JSON file and rebuild.</li>'}</ul></body></html>\n`);
+  fs.writeFileSync(path.join(output, 'index.html'), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Neighborhood websites · Demo collection</title><style>body{background:#f6f4ed;color:#262923;font:16px/1.6 Arial,sans-serif;max-width:900px;margin:70px auto;padding:0 24px}h1{font:52px/1.1 Georgia,serif;letter-spacing:-2px}p{color:#66695f}ul{list-style:none;padding:0;margin-top:40px}li{border-top:1px solid #deded3;padding:25px 0}a{color:inherit;font:28px Georgia,serif;text-underline-offset:6px}small{display:block;margin-top:10px;color:#66695f}.label{font-size:11px;text-transform:uppercase;letter-spacing:2px}</style></head><body><p class="label">Independent businesses. Thoughtful websites.</p><h1>A little local.<br>A lot of possibility.</h1><p>A collection of website previews, built by Abhinav.<br>Samples are fictional; other previews are unofficial until approved by the owner.</p><ul>${previews.map(b => `<li><a href="./${b.slug}/">${esc(b.name)} ↗</a><small>${esc(b.preset.label)} · ${esc(b.city || 'Local business')}${b.sample ? ' · FICTIONAL SAMPLE' : ' · Website preview'}</small></li>`).join('') || '<li>No demos yet. Add a business JSON file and rebuild.</li>'}</ul></body></html>\n`);
   fs.mkdirSync(path.join(root, 'outreach'), { recursive: true });
-  const messages = businesses.map(b => `${b.name}${b.sample ? ' [FICTIONAL SAMPLE — DO NOT SEND]' : ''}\n${b.outreachPraise ? personalText(b, `${base}/${b.slug}/`) : firstText(b.name, `${base}/${b.slug}/`)}\n`).join('\n');
+  const messages = previews.map(b => `${b.name}${b.sample ? ' [FICTIONAL SAMPLE — DO NOT SEND]' : ''}\n${b.outreachPraise ? personalText(b, `${base}/${b.slug}/`) : firstText(b.name, `${base}/${b.slug}/`)}\n`).join('\n');
   fs.writeFileSync(path.join(root, 'outreach', 'messages.txt'), messages);
   log(`Generated docs/index.html, docs/.nojekyll, outreach/messages.txt`);
   log(`Done: ${businesses.length} site(s). Pages base: ${base}`);
