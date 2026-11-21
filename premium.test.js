@@ -104,9 +104,9 @@ test('local photos are copied on every build; missing photos preserve previous o
   assert.ok(fs.existsSync(destination));
 });
 
-test('all eighteen real records use the chosen pitch and locally available photos', () => {
+test('all nineteen real records use the chosen pitch and locally available photos', () => {
   const records = fs.readdirSync(new URL('./businesses/', import.meta.url)).map(file => JSON.parse(fs.readFileSync(new URL(`./businesses/${file}`, import.meta.url), 'utf8'))).filter(b => b.outreachPraise);
-  assert.equal(records.length, 18);
+  assert.equal(records.length, 19);
   for (const b of records) {
     const text = personalText(b, `https://nepaliterminal.github.io/local-shop-sites/${b.slug}/`);
     assert.match(text, new RegExp(`^Hello `));
