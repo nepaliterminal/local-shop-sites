@@ -10,7 +10,7 @@ Small edits cover hours, prices, photos, and text. New features are quoted separ
 
 ## How do I pay?
 
-It's Abhinav. Once you approve the final version and it's live, the $200 is due. Cash App $absubedi, cash, check, or Zelle to <Zelle email/phone> all work. Which is easiest? I'll send a receipt.
+It's Abhinav. Once you approve the final version and it's live, the $200 is due. Cash App $absubedi, PayPal to <PayPal email>, cash, or check all work. Which is easiest? I'll send a receipt.
 
 For a check, make it payable to <confirmed check payee>. I deposit checks in Cash App. I'll confirm when it clears.
 
@@ -28,7 +28,7 @@ After year one, updates are optional at $15/month. A .com is optional too, at co
 
 I'm Abhinav. I built an independent preview for <shop> from public information; I'm not with Google or claiming to represent your shop. You can review it here: <link>. No login, card details, or payment needed to view it.
 
-Happy to talk through it first. You only pay if you decide to keep it, after you approve the final version and it's live. Cash App $absubedi, cash, check, or Zelle to <Zelle email/phone> are options then.
+Happy to talk through it first. You only pay if you decide to keep it, after you approve the final version and it's live. Cash App $absubedi, PayPal to <PayPal email>, cash, or check are options then.
 
 ## Need a domain / Do I need a domain?
 
