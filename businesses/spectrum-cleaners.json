@@ -1,0 +1,56 @@
+{
+  "slug": "spectrum-cleaners",
+  "name": "Spectrum Cleaners",
+  "category": "dry clean",
+  "theme": "classic",
+  "tagline": "Freshly cared for.\nBeautifully fitted.",
+  "about": "Dry cleaning and alterations on West Broad Street in Falls Church. Customers return for friendly service, careful garment care, and help with the fit of their favorite clothes.",
+  "phone": "(703) 237-2889",
+  "address": "450 W Broad St Ste 130, Falls Church, VA 22046",
+  "city": "Falls Church, VA",
+  "services": [
+    {
+      "name": "Dry cleaning"
+    },
+    {
+      "name": "Dress alterations"
+    },
+    {
+      "name": "Hemming"
+    },
+    {
+      "name": "Shoulder alterations"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Thi L.",
+      "text": "I have been going here for almost 2 years to get my husband’s dry cleaning done and the price, quality and speediness is unbeatable."
+    },
+    {
+      "author": "Wi",
+      "text": "I needed my dress fitted as it was too loose for an upcoming photography shoot. She was able to get it hemmed and the shoulders fixed."
+    }
+  ],
+  "photoAlts": [
+    "Spectrum Cleaners storefront on West Broad Street"
+  ],
+  "demo": true,
+  "hours": {
+    "Friday": "6 AM–8 PM",
+    "Saturday": "6 AM–8 PM",
+    "Sunday": "10 AM–5 PM",
+    "Monday": "6 AM–8 PM",
+    "Tuesday": "6 AM–8 PM",
+    "Wednesday": "6 AM–8 PM",
+    "Thursday": "6 AM–8 PM"
+  },
+  "rating": 4.6,
+  "reviewCount": 79,
+  "maps_url": "https://www.google.com/maps/place/Spectrum+Cleaners/@38.8868333,-77.1770826,17z/data=!3m1!4b1!4m6!3m5!1s0x89b7b4c3f917e225:0x991729baad5f0db0!8m2!3d38.8868333!4d-77.1770826!16s%2Fg%2F1td05yst",
+  "mapsQuery": "Spectrum Cleaners, 450 W Broad St Ste 130, Falls Church, VA 22046",
+  "outreachPraise": "your quality dry cleaning and alterations",
+  "photos": [
+    "img/photo-1.jpg"
+  ]
+}

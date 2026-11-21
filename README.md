@@ -64,9 +64,13 @@ Only `name` and `slug` are required. Slugs must be unique, lowercase alphanumeri
 
 ### Real listing demos and premium themes
 
-Six unofficial Northern Virginia previews are included: `master-auto`, `chefs-doner`, `salon-angel`, `merrifield-tailor`, `silk-road-grill`, and `rolling-burrito`. Facts and review excerpts come from the supplied Google Maps listing export. Website-button absence was reported with that export, not independently re-audited. Chef's Doner is in Dunn Loring; the other shops are in Fairfax/Falls Church. Master Auto's Shell-station location and Rolling Burrito's unclaimed listing status were supplied separately with the brief.
+Twelve unofficial Northern Virginia previews are included. The original six are `master-auto`, `chefs-doner`, `salon-angel`, `merrifield-tailor`, `silk-road-grill`, and `rolling-burrito`; their facts and reviews came from a supplied Google Maps export. Six additional listings were independently checked on November 21, 2026: `merrifield-auto`, `spectrum-cleaners`, `anlei-hair-salon`, `seven-hair-line`, `salsa-verde`, and `alianza-barbershop-2`. Each additional listing displayed Google's “Add website” prompt, and a business-name/address search found no standalone official website. Social profiles and directories are not counted as standalone sites; this is evidence from the check, not proof that no site can exist.
 
 For real records, add `maps_url` (the full listing link). This activates the premium renderer in `premium.js`, with automatic category themes: `auto repair` → industrial, `salon` → editorial, `tailor` / `dry clean` → classic, `food truck` → streetfood, `restaurant` → charcoal. `theme` can explicitly select `industrial`, `editorial`, `classic`, `streetfood`, `charcoal`, or `fiesta`. The restaurants use distinct food-forward compositions, not just palette changes. Fictional samples retain their original design.
+
+An optional `themeCopy` object can customize the `icon`, `kicker`, `services`, `story`, `closing`, `label`, and `gallery` labels. Values must be strings and are escaped when rendered. Alianza’s uses this to reuse the classic layout without tailoring-specific copy.
+
+An optional `photoPositions` array sets each image's horizontal focal point as a percentage from 0 (left) to 100 (right). Merrifield Auto uses it to keep its street number visible in the mobile gallery crop. One-photo editorial pages use a single centered arch instead of an empty secondary frame.
 
 Use local photo paths such as `img/photo-1.jpg` in the JSON and place their source files in `assets/<slug>/img/`. The build validates their presence **before** replacing `docs/`, then copies them to `docs/<slug>/img/` on every build. Never store the only copy in `docs/`. Add useful descriptions in a parallel `photoAlts` array. Local hero/OG/schema images resolve against the correct Pages base; no real-demo photo hotlinks Google. No remote fonts or scripts are required by these themes.
 
@@ -87,7 +91,7 @@ Rebuild after edits. Review the site at narrow and wide widths; verify phone lin
 
 ## Publish on GitHub Pages
 
-This repository starts locally on `main`, with no remote configured. Nothing has been pushed or published.
+The repository is published at https://nepaliterminal.github.io/local-shop-sites/ using `main` and `/docs`. For a separate copy:
 
 1. Create your own GitHub repository named `local-shop-sites`, then add its remote and push `main` when ready.
 2. If the account/repo differs from the default, build with the correct `PAGES_BASE` first; commit both source and generated output.

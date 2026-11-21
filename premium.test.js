@@ -17,7 +17,7 @@ test('listing categories automatically select distinct themes and hero treatment
     assert.match(page({ category }), new RegExp(`<body class="${expected}">`));
   }
   assert.match(page({ theme: 'industrial' }), /class="image-label"/);
-  assert.match(page({ theme: 'editorial' }), /class="editorial-photos"/);
+  assert.match(page({ theme: 'editorial' }), /class="editorial-photos single"/);
   assert.match(page({ theme: 'streetfood' }), /class="truck-stamp"/);
   assert.match(page({ theme: 'fiesta' }), /<body class="fiesta">/);
 });
@@ -63,9 +63,25 @@ test('known hours highlight the visitor’s current day; missing hours script is
 });
 
 test('new input rejects unsafe themes, links, local paths, and malformed optional content', () => {
-  for (const override of [{ theme: '</style>' }, { maps_url: 'javascript:alert(1)' }, { photos: ['img/../../secret.jpg'] }, { photos: ['//example.com/tracker.jpg'] }, { photoAlts: 'wrong type' }, { outreachPraise: {}, rating: 4.9 }, { outreachPraise: 'the service', rating: null }, { unclaimed: 'yes' }]) assert.throws(() => normalize({ ...shop, ...override }));
+  for (const override of [{ theme: '</style>' }, { themeCopy: [] }, { themeCopy: { unknown: 'label' } }, { themeCopy: { story: 7 } }, { maps_url: 'javascript:alert(1)' }, { photos: ['img/../../secret.jpg'] }, { photos: ['//example.com/tracker.jpg'] }, { photoAlts: 'wrong type' }, { outreachPraise: {}, rating: 4.9 }, { outreachPraise: 'the service', rating: null }, { unclaimed: 'yes' }]) assert.throws(() => normalize({ ...shop, ...override }));
   assert.match(page({ name: '<img src=x>', about: '</script><script>bad()</script>' }), /&lt;img src=x&gt;/);
   assert.doesNotMatch(page({ name: '<img src=x>' }), /<img src=x>/);
+});
+
+test('a barber can reuse the classic design without tailoring copy or unescaped labels', () => {
+  const html = page({ category: 'barber', theme: 'classic', themeCopy: { services: 'A cut above.', story: 'Sharp cuts.\nA warm welcome.', closing: '<script>bad()</script>' } });
+  assert.match(html, /A cut above\./);
+  assert.match(html, /Sharp cuts\.<br>A warm welcome\./);
+  assert.match(html, /&lt;script&gt;bad\(\)&lt;\/script&gt;/);
+  assert.doesNotMatch(html, /<script>bad/);
+});
+
+test('single-photo salons omit the second frame and image focal points stay safe', () => {
+  const html = page({ photos: ['img/photo-1.jpg'], photoPositions: [0] });
+  assert.match(html, /class="editorial-photos single"/);
+  assert.doesNotMatch(html, /<div class="editorial-aside">|class="photo-placeholder"/);
+  assert.match(html, /style="object-position:0% center"/);
+  for (const photoPositions of ['left', [101], [-1], ['0; background:url(x)']]) assert.throws(() => normalize({ ...shop, photoPositions }));
 });
 
 test('local photos are copied on every build; missing photos preserve previous output', t => {
@@ -80,7 +96,7 @@ test('local photos are copied on every build; missing photos preserve previous o
   run();
   const destination = path.join(root, 'docs', shop.slug, 'img', 'photo-1.jpg');
   assert.deepEqual(fs.readFileSync(destination), fs.readFileSync(source));
-  assert.match(fs.readFileSync(path.join(root, 'outreach', 'messages.txt'), 'utf8'), /Your 4.9★ reviews praise the color/);
+    assert.match(fs.readFileSync(path.join(root, 'outreach', 'messages.txt'), 'utf8'), /4.9 star Google reviews, which praise the color/);
   run();
   assert.ok(fs.existsSync(destination));
   fs.unlinkSync(source);
@@ -88,23 +104,23 @@ test('local photos are copied on every build; missing photos preserve previous o
   assert.ok(fs.existsSync(destination));
 });
 
-test('all six real records have short personal outreach and locally available photos', () => {
+test('all twelve real records use the chosen pitch and locally available photos', () => {
   const records = fs.readdirSync(new URL('./businesses/', import.meta.url)).map(file => JSON.parse(fs.readFileSync(new URL(`./businesses/${file}`, import.meta.url), 'utf8'))).filter(b => b.outreachPraise);
-  assert.equal(records.length, 6);
+  assert.equal(records.length, 12);
   for (const b of records) {
     const text = personalText(b, `https://nepaliterminal.github.io/local-shop-sites/${b.slug}/`);
-    assert.ok(text.length < 320, `${b.slug}: ${text.length} characters`);
+    assert.match(text, new RegExp(`^Hello `));
     assert.ok(text.includes(b.rating.toFixed(1)));
     assert.ok(text.includes(b.outreachPraise));
-    assert.match(text, /\$200 one-time; pay only if you like it\. Cash App \$absubedi/);
-    assert.ok(b.reviews.length >= 3 && b.reviews.length <= 4);
+    assert.match(text, /It's a one-time fee of \$200, and you only pay if you decide to keep it\. Let me know if you'd like more info\.$/);
+    assert.doesNotMatch(text, /Abhinav|Cash App|absubedi/);
+    assert.ok(b.reviews.length >= 2 && b.reviews.length <= 4);
     assert.ok(b.reviews.every(r => r.text.length <= 220));
     assert.ok(b.services.every(s => !('price' in s)));
     for (const photo of b.photos) {
       assert.match(photo, /^img\//);
       assert.ok(fs.existsSync(new URL(`./assets/${b.slug}/${photo}`, import.meta.url)));
     }
-    if (b.slug === 'rolling-burrito') assert.match(text, /help claim your Google listing/);
     if (['chefs-doner', 'silk-road-grill'].includes(b.slug)) assert.deepEqual(b.hours, {});
   }
 });

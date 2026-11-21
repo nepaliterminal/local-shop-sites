@@ -1,0 +1,54 @@
+{
+  "slug": "anlei-hair-salon",
+  "name": "An'lei Hair Salon",
+  "category": "salon",
+  "theme": "editorial",
+  "tagline": "Your hair.\nYour own kind\nof beautiful.",
+  "about": "A personal approach to hair on John Marr Drive in Annandale. Customers praise the friendly consultations, attention to detail, and haircuts shaped around what they want.",
+  "phone": "(240) 997-6884",
+  "address": "4538 John Marr Dr, Annandale, VA 22003",
+  "city": "Annandale, VA",
+  "locationNote": "Floor 1 · John Marr Professional Center",
+  "services": [
+    {
+      "name": "Haircuts"
+    },
+    {
+      "name": "Personalized styling"
+    },
+    {
+      "name": "Hair consultations"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "T S",
+      "text": "I’ve been going to An’Lei Hair Salon for nearly 2 years now and can confidently say this is my go-to hair stylist."
+    },
+    {
+      "author": "Hamid S.",
+      "text": "He cut my hair exactly the same way as the picture I showed him, which is exactly what I wanted. The haircut was also very fast but still detailed and clean."
+    }
+  ],
+  "photoAlts": [
+    "Interior of An'lei Hair Salon on John Marr Drive"
+  ],
+  "demo": true,
+  "hours": {
+    "Friday": "10 AM–6:30 PM",
+    "Saturday": "10 AM–6:30 PM",
+    "Sunday": "Closed",
+    "Monday": "10 AM–6:30 PM",
+    "Tuesday": "10 AM–6:30 PM",
+    "Wednesday": "10 AM–6:30 PM",
+    "Thursday": "10 AM–6:30 PM"
+  },
+  "rating": 4.7,
+  "reviewCount": 38,
+  "maps_url": "https://www.google.com/maps/place/An'lei+Hair+Salon/@38.8286041,-77.192638,17z/data=!3m1!4b1!4m6!3m5!1s0x89b7b32ce26aaaab:0x39e9a2c12e0920dd!8m2!3d38.8286041!4d-77.192638!16s%2Fg%2F11h3vb_0zh",
+  "mapsQuery": "An'lei Hair Salon, 4538 John Marr Dr, Annandale, VA 22003",
+  "outreachPraise": "your detailed haircuts and friendly service",
+  "photos": [
+    "img/photo-1.jpg"
+  ]
+}
