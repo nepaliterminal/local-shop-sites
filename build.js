@@ -42,8 +42,10 @@ export function normalize(raw, source = 'Business') {
   if (raw.reviewCount != null && (!Number.isInteger(raw.reviewCount) || raw.reviewCount < 1)) throw new Error(`${source}: reviewCount must be a positive integer`);
   if (raw.photos?.some(p => typeof p !== 'string' || (!safeURL(p) && !/^img\/[a-z0-9-]+\.(jpg|jpeg|png|webp)$/.test(p)))) throw new Error(`${source}: photos must be http(s) URLs or safe img/ filenames`);
   if (raw.photoAlts != null && (!Array.isArray(raw.photoAlts) || raw.photoAlts.some(a => typeof a !== 'string'))) throw new Error(`${source}: photoAlts must be an array of strings`);
+  if (raw.photoPositions != null && (!Array.isArray(raw.photoPositions) || raw.photoPositions.some(p => typeof p !== 'number' || !Number.isFinite(p) || p < 0 || p > 100))) throw new Error(`${source}: photoPositions must contain horizontal percentages between 0 and 100`);
   if (raw.maps_url != null && !safeURL(raw.maps_url)) throw new Error(`${source}: maps_url must be an http(s) URL`);
   if (raw.theme != null && !themes.includes(raw.theme)) throw new Error(`${source}: unknown theme`);
+  if (raw.themeCopy != null && (typeof raw.themeCopy !== 'object' || Array.isArray(raw.themeCopy) || Object.entries(raw.themeCopy).some(([key, value]) => !['icon', 'kicker', 'services', 'story', 'closing', 'label', 'gallery'].includes(key) || typeof value !== 'string'))) throw new Error(`${source}: themeCopy must contain known theme labels as strings`);
   if (raw.outreachPraise && !raw.rating) throw new Error(`${source}: personalized outreach requires a verified rating`);
   for (const key of ['demo', 'sample', 'unclaimed']) if (raw[key] != null && typeof raw[key] !== 'boolean') throw new Error(`${source}: ${key} must be true or false`);
   const preset = Object.hasOwn(presets, raw.category) ? presets[raw.category] : presets.generic;

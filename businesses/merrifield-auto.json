@@ -1,0 +1,59 @@
+{
+  "slug": "merrifield-auto",
+  "name": "Merrifield Auto",
+  "category": "auto repair",
+  "theme": "industrial",
+  "tagline": "Good hands.\nHonest answers.",
+  "about": "Auto repair on Hartland Road in Falls Church. Customers value the owner's straightforward advice, clear explanations, and thoughtful approach to getting their cars back on the road.",
+  "phone": "(703) 573-4467",
+  "address": "2856 Hartland Rd, Falls Church, VA 22043",
+  "city": "Falls Church, VA",
+  "services": [
+    {
+      "name": "Auto repairs"
+    },
+    {
+      "name": "Vehicle maintenance"
+    },
+    {
+      "name": "Repair consultations"
+    },
+    {
+      "name": "Vehicle inspections"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Ziqi H.",
+      "text": "He ordered the parts the same day, I dropped off my car, and it was fixed the next day."
+    },
+    {
+      "author": "Jon A.",
+      "text": "Been here three times and every single time the owner takes the time to show me exactly what’s going on and what his honest opinion is."
+    }
+  ],
+  "photoAlts": [
+    "Classic car shared on the Merrifield Auto Google listing",
+    "Merrifield Auto entrance at 2856 Hartland Road"
+  ],
+  "photoPositions": [50, 0],
+  "demo": true,
+  "hours": {
+    "Friday": "9 AM–6:30 PM",
+    "Saturday": "9 AM–2 PM",
+    "Sunday": "Closed",
+    "Monday": "9 AM–6:30 PM",
+    "Tuesday": "9 AM–6:30 PM",
+    "Wednesday": "9 AM–6:30 PM",
+    "Thursday": "9 AM–6:30 PM"
+  },
+  "rating": 4.6,
+  "reviewCount": 80,
+  "maps_url": "https://www.google.com/maps/place/Merrifield+Auto/@38.8761111,-77.2238889,17z/data=!3m1!4b1!4m6!3m5!1s0x89b64b68ad69e951:0x6e8c07b44d64527a!8m2!3d38.8761111!4d-77.2238889!16s%2Fg%2F11bwpzwylz",
+  "mapsQuery": "Merrifield Auto, 2856 Hartland Rd, Falls Church, VA 22043",
+  "outreachPraise": "your honest advice and careful repairs",
+  "photos": [
+    "img/photo-1.jpg",
+    "img/photo-2.jpg"
+  ]
+}

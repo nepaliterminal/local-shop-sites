@@ -1,0 +1,63 @@
+{
+  "slug": "salsa-verde",
+  "name": "Salsa Verde Food Truck",
+  "category": "food truck",
+  "theme": "fiesta",
+  "tagline": "Small truck.\nBig taco energy.",
+  "about": "A taco stop on West Broad Street in Falls Church. Customers come for Mexican-style street tacos and return for the flavor, friendly service, and a satisfying lunch break.",
+  "phone": "(571) 602-2565",
+  "address": "400 W Broad St, Falls Church, VA 22046",
+  "city": "Falls Church, VA",
+  "locationNote": "Food truck · Call to confirm today's location",
+  "services": [
+    {
+      "name": "Chicken tacos"
+    },
+    {
+      "name": "Pork tacos"
+    },
+    {
+      "name": "Steak tacos"
+    },
+    {
+      "name": "Birria tacos"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Shaun D.",
+      "text": "I ordered one of each of the chicken pork and steak soft tacos. They all were delicious and the service was great."
+    },
+    {
+      "author": "Jon L.",
+      "text": "This taco truck is legit. Real Mexican-style street tacos on corn tortillas."
+    },
+    {
+      "author": "Amber D.",
+      "text": "I stopped here on my lunch break. Best decision ever the food was so amazing. I will definitely be back soon."
+    }
+  ],
+  "photoAlts": [
+    "Street tacos with lime and radishes from the Salsa Verde listing",
+    "Toasted tortilla dish shared on the Salsa Verde Google listing"
+  ],
+  "demo": true,
+  "hours": {
+    "Friday": "10 AM–10 PM",
+    "Saturday": "10 AM–10 PM",
+    "Sunday": "10 AM–10 PM",
+    "Monday": "10 AM–10 PM",
+    "Tuesday": "10 AM–10 PM",
+    "Wednesday": "10 AM–10 PM",
+    "Thursday": "10 AM–10 PM"
+  },
+  "rating": 4.7,
+  "reviewCount": 62,
+  "maps_url": "https://www.google.com/maps/place/Salsa+Verde+Food+Truck/@38.8855529,-77.175864,17z/data=!3m1!4b1!4m6!3m5!1s0x89b7b58e0d656409:0x84a1906db22f4772!8m2!3d38.8855529!4d-77.175864!16s%2Fg%2F11yfq6dbyz",
+  "mapsQuery": "Salsa Verde Food Truck, 400 W Broad St, Falls Church, VA 22046",
+  "outreachPraise": "your street tacos and excellent service",
+  "photos": [
+    "img/photo-1.jpg",
+    "img/photo-2.jpg"
+  ]
+}

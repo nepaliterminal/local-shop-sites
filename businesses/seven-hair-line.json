@@ -1,0 +1,63 @@
+{
+  "slug": "seven-hair-line",
+  "name": "Seven Hair Line Inc",
+  "outreachName": "Seven Hair Line",
+  "category": "salon",
+  "theme": "editorial",
+  "tagline": "A fresh shape.\nA softer side\nof you.",
+  "about": "A neighborhood hair salon on Columbia Pike in Annandale. Customers celebrate the skilled perms, thoughtful cuts, and welcoming care that make a new look feel personal.",
+  "phone": "(703) 209-1714",
+  "address": "7116 Columbia Pike, Annandale, VA 22003",
+  "city": "Annandale, VA",
+  "services": [
+    {
+      "name": "Haircuts"
+    },
+    {
+      "name": "Magic straight perms"
+    },
+    {
+      "name": "Perms"
+    },
+    {
+      "name": "Bob cuts"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Michelle",
+      "text": "It was such a great experience!"
+    },
+    {
+      "author": "Sky",
+      "text": "When I walked in, I was immediately greeted with warmth and kindness. I got a perm and a short bob, and she was not only fast, but it was done with amazing skill and care."
+    },
+    {
+      "author": "Sharon K.",
+      "text": "Got a magic straight perm and she did a fantastic job!"
+    }
+  ],
+  "photoAlts": [
+    "Layered hairstyle shared on the Seven Hair Line Google listing",
+    "Long hairstyle photographed inside Seven Hair Line"
+  ],
+  "demo": true,
+  "hours": {
+    "Friday": "9 AM–6 PM",
+    "Saturday": "9 AM–6 PM",
+    "Sunday": "Closed",
+    "Monday": "9 AM–6 PM",
+    "Tuesday": "9 AM–6 PM",
+    "Wednesday": "9 AM–6 PM",
+    "Thursday": "9 AM–6 PM"
+  },
+  "rating": 4.7,
+  "reviewCount": 153,
+  "maps_url": "https://www.google.com/maps/place/Seven+Hair+Line+Inc/@38.8327459,-77.1912064,17z/data=!3m1!4b1!4m6!3m5!1s0x89b7b3325da4f74d:0xe9c27e616867e1bb!8m2!3d38.8327459!4d-77.1912064!16s%2Fg%2F1tctmpf2",
+  "mapsQuery": "Seven Hair Line Inc, 7116 Columbia Pike, Annandale, VA 22003",
+  "outreachPraise": "your skilled perms and warm service",
+  "photos": [
+    "img/photo-1.jpg",
+    "img/photo-2.jpg"
+  ]
+}

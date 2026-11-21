@@ -1,0 +1,72 @@
+{
+  "slug": "alianza-barbershop-2",
+  "name": "Alianza’s Barbershop 2",
+  "category": "barber",
+  "theme": "classic",
+  "tagline": "Fresh cuts.\nGood company.",
+  "about": "Haircuts and styling on the second floor of 7221 Little River Turnpike in Annandale. Customers praise the detailed cuts, patient stylists, and care for curly hair.",
+  "phone": "(703) 712-7290",
+  "address": "7221 Little River Turnpike Fl 2, Annandale, VA 22003",
+  "city": "Annandale, VA",
+  "locationNote": "Second floor · Call for an appointment",
+  "themeCopy": {
+    "icon": "✂",
+    "kicker": "Barbering & hair styling",
+    "services": "A cut above.",
+    "story": "Sharp cuts.\nA warm welcome.",
+    "closing": "Your next fresh start.",
+    "label": "Haircuts, with a personal touch",
+    "gallery": "Inside Alianza’s."
+  },
+  "services": [
+    {
+      "name": "Haircuts"
+    },
+    {
+      "name": "Highlights"
+    },
+    {
+      "name": "Curly-hair styling"
+    },
+    {
+      "name": "Blowouts"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Grecya A.",
+      "text": "My stylist was very patient and made me feel comfortable throughout the appointment. I love my haircut and the highlights, my hair feels so soft and healthy."
+    },
+    {
+      "author": "Caridad M.",
+      "text": "I drove an hour an came in to see the fabulous Mely for wash blow dry and cut for my curly hair every time I come see Mely she always leaves my hair looking better then I came in"
+    },
+    {
+      "author": "royce d.",
+      "text": "One of the best haircuts I have gotten, had no complains. Very detailed and I really loved it"
+    }
+  ],
+  "photoAlts": [
+    "Interior of Alianza’s Barbershop 2 with barber chairs and geometric ceiling lights",
+    "Finished hairstyle shared on the Alianza’s Barbershop 2 listing"
+  ],
+  "demo": true,
+  "hours": {
+    "Friday": "10:30 AM–7:30 PM",
+    "Saturday": "9:30 AM–6 PM",
+    "Sunday": "10:30 AM–4:30 PM",
+    "Monday": "10:30 AM–7:30 PM",
+    "Tuesday": "10:30 AM–7:30 PM",
+    "Wednesday": "10:30 AM–7:30 PM",
+    "Thursday": "10:30 AM–7:30 PM"
+  },
+  "rating": 4.9,
+  "reviewCount": 57,
+  "maps_url": "https://www.google.com/maps/place/Alianza%E2%80%99s+Barbershop+2/@38.8299117,-77.1956896,17z/data=!3m1!4b1!4m6!3m5!1s0x89b64d007dad1eff:0x813eea445d91bf9c!8m2!3d38.8299117!4d-77.1956896!16s%2Fg%2F11nbb8rjlp",
+  "mapsQuery": "Alianza’s Barbershop 2, 7221 Little River Turnpike Fl 2, Annandale, VA 22003",
+  "outreachPraise": "your detailed haircuts and patient stylists",
+  "photos": [
+    "img/photo-1.jpg",
+    "img/photo-2.jpg"
+  ]
+}
