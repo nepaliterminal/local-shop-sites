@@ -1,0 +1,79 @@
+{
+  "slug": "manjares-bakery",
+  "name": "Manjares Bakery",
+  "category": "bakery",
+  "theme": "fiesta",
+  "tagline": "Pan dulce,\nbaked fresh\nevery morning.",
+  "about": "A Latin bakery on Blenheim Boulevard in Fairfax City. Customers drive across Northern Virginia for its conchas, semitas de piña, pan de muerto, and tres leches cakes.",
+  "phone": "(571) 596-4660",
+  "address": "9540 Blenheim Blvd, Fairfax, VA 22031",
+  "city": "Fairfax, VA",
+  "locationNote": "Open early · Call ahead for cake orders",
+  "themeCopy": {
+    "icon": "✿",
+    "kicker": "Panadería in Fairfax",
+    "services": "Fresh from the oven.",
+    "story": "Baked with love.\nShared with pride.",
+    "closing": "Come by for something sweet.",
+    "label": "Conchas, semitas & tres leches",
+    "gallery": "Inside Manjares."
+  },
+  "services": [
+    {
+      "name": "Conchas"
+    },
+    {
+      "name": "Semita de piña"
+    },
+    {
+      "name": "Pan de muerto (seasonal)"
+    },
+    {
+      "name": "Tres leches cake"
+    },
+    {
+      "name": "Mini choco-flans"
+    },
+    {
+      "name": "Galletas"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Ivan R.",
+      "text": "The Tres Leches was moist, perfectly balanced, and beautifully done. Even our foodie friends couldn’t stop talking about it"
+    },
+    {
+      "author": "Jennifer H.",
+      "text": "The semita de pina is delicious. The bread is soft and the filling has small pieces of pineapple. One of the best I've had in NOVA area."
+    },
+    {
+      "author": "Mon S.",
+      "text": "Fresh baked greatness, authentic mexican concha flavor 😍😍😍 Drove 30 minutes, and was so worth it."
+    }
+  ],
+  "photoAlts": [
+    "Pastry case full of pan dulce at Manjares Bakery",
+    "Assorted galletas from Manjares Bakery"
+  ],
+  "demo": true,
+  "hours": {
+    "Monday": "7 AM–8 PM",
+    "Tuesday": "7 AM–8 PM",
+    "Wednesday": "7 AM–8 PM",
+    "Thursday": "7 AM–8 PM",
+    "Friday": "7 AM–8 PM",
+    "Saturday": "7 AM–8 PM",
+    "Sunday": "8 AM–7 PM"
+  },
+  "rating": 4.9,
+  "reviewCount": 87,
+  "maps_url": "https://www.google.com/maps/place/Manjares+Bakery/data=!4m7!3m6!1s0x89b64d4f4c7ea40d:0x9897e1dc24695705!8m2!3d38.8662621!4d-77.2749937!16s%2Fg%2F11w4dlvd85!19sChIJDaR-TE9NtokRBVdpJNzhl5g",
+  "mapsQuery": "Manjares Bakery, 9540 Blenheim Blvd, Fairfax, VA 22031",
+  "outreachName": "Manjares Bakery",
+  "outreachPraise": "your tres leches and fresh pan dulce",
+  "photos": [
+    "img/photo-1.jpg",
+    "img/photo-2.jpg"
+  ]
+}

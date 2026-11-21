@@ -1,0 +1,76 @@
+{
+  "slug": "georges-shoe-repair",
+  "name": "George’s Shoe Repair",
+  "category": "shoe repair",
+  "theme": "classic",
+  "tagline": "Good shoes deserve\na second life.",
+  "about": "A cobbler on Lee Highway in Fairfax. Customers praise George’s craftsmanship, reasonable prices, and honest advice on whether a resole, a topper, or a new heel is the right fix.",
+  "phone": "(703) 876-9660",
+  "address": "8709 US-29, Fairfax, VA 22031",
+  "city": "Fairfax, VA",
+  "locationNote": "Drop-off shop · Call for turnaround times",
+  "themeCopy": {
+    "icon": "✚",
+    "kicker": "Cobbler in Fairfax",
+    "services": "Repaired by hand.",
+    "story": "Real craft.\nHonest advice.",
+    "closing": "Bring your favorites back.",
+    "label": "Shoe & boot repair",
+    "gallery": "At George’s."
+  },
+  "services": [
+    {
+      "name": "Resoling"
+    },
+    {
+      "name": "Heel replacement"
+    },
+    {
+      "name": "Boot stretching"
+    },
+    {
+      "name": "Dress shoe repair"
+    },
+    {
+      "name": "Boot refresh & recrafting"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Chuck B.",
+      "text": "George does fantastic work, he’s a real craftsman. Shoes were returned looking great"
+    },
+    {
+      "author": "Amanda M.",
+      "text": "He fixed three pairs of my shoes for a reasonable price, including my beloved black boots that needed a refresh. Very friendly guy who clearly knows his craft."
+    },
+    {
+      "author": "R. Adam C.",
+      "text": "I would recommend this gentleman to anyone looking for an honest business."
+    }
+  ],
+  "photoAlts": [
+    "George’s Shoe Repair storefront on Lee Highway",
+    "Resoled black leather boot from George’s Shoe Repair"
+  ],
+  "demo": true,
+  "hours": {
+    "Monday": "10:30 AM–6 PM",
+    "Tuesday": "10:30 AM–6 PM",
+    "Wednesday": "10:30 AM–5 PM",
+    "Thursday": "10:30 AM–6 PM",
+    "Friday": "10:30 AM–6 PM",
+    "Saturday": "10:30 AM–5 PM",
+    "Sunday": "Closed"
+  },
+  "rating": 4.7,
+  "reviewCount": 161,
+  "maps_url": "https://www.google.com/maps/place/George%27s+Shoe+Repair/data=!4m7!3m6!1s0x89b64b81542a832f:0x85996640b7e6344f!8m2!3d38.8727782!4d-77.2457277!16s%2Fg%2F1x5qtnr5!19sChIJL4MqVIFLtokRTzTmt0BmmYU",
+  "mapsQuery": "George’s Shoe Repair, 8709 US-29, Fairfax, VA 22031",
+  "outreachName": "George’s Shoe Repair",
+  "outreachPraise": "your careful craftsmanship and honest advice",
+  "photos": [
+    "img/photo-1.jpg",
+    "img/photo-2.jpg"
+  ]
+}

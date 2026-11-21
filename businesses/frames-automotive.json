@@ -1,0 +1,65 @@
+{
+  "slug": "frames-automotive",
+  "name": "Frames Automotive",
+  "category": "auto repair",
+  "theme": "industrial",
+  "tagline": "Honest repairs.\nDone right the\nfirst time.",
+  "about": "A family-style repair shop on Mill Street in Vienna. Drivers come for second opinions after dealership quotes and stay for honest diagnoses, fair prices, and thorough work.",
+  "phone": "(703) 255-0666",
+  "address": "340 Mill St NE Ste B, Vienna, VA 22180",
+  "city": "Vienna, VA",
+  "locationNote": "AAA-listed shop · Call to schedule",
+  "services": [
+    {
+      "name": "Diagnostics & second opinions"
+    },
+    {
+      "name": "Engine & cooling repairs"
+    },
+    {
+      "name": "Domestic & foreign vehicles"
+    },
+    {
+      "name": "Overall service checks"
+    },
+    {
+      "name": "Trucks & SUVs"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Holly Z.",
+      "text": "If you want someone honest who actually knows what they’re doing, I’d 100% recommend Frames. They are highly rated for a reason!"
+    },
+    {
+      "author": "William H.",
+      "text": "My preferred shop. Can be hard to get scheduled, but their work is thorough and fairly priced."
+    },
+    {
+      "author": "Kaitlin S.",
+      "text": "Finding a genuine car repair shop can be challenging, but this one truly stands out."
+    }
+  ],
+  "photoAlts": [
+    "Frames Automotive storefront at 340 Mill Street NE"
+  ],
+  "demo": true,
+  "hours": {
+    "Monday": "8 AM–5 PM",
+    "Tuesday": "8 AM–5 PM",
+    "Wednesday": "8 AM–5 PM",
+    "Thursday": "8 AM–5 PM",
+    "Friday": "8 AM–5 PM",
+    "Saturday": "8 AM–12 PM",
+    "Sunday": "Closed"
+  },
+  "rating": 5,
+  "reviewCount": 84,
+  "maps_url": "https://www.google.com/maps/place/Frames+Automotive/data=!4m7!3m6!1s0x89b64bc969e0d113:0xce214a46e2c556a!8m2!3d38.9056436!4d-77.2676662!16s%2Fg%2F1tjdmmn0!19sChIJE9HgaclLtokRalUsbqQU4gw",
+  "mapsQuery": "Frames Automotive, 340 Mill St NE Ste B, Vienna, VA 22180",
+  "outreachName": "Frames Automotive",
+  "outreachPraise": "your honest diagnoses and fair pricing",
+  "photos": [
+    "img/photo-1.jpg"
+  ]
+}

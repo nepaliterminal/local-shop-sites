@@ -1,0 +1,79 @@
+{
+  "slug": "oakton-barber-shop",
+  "name": "Oakton Barber Shop",
+  "category": "barber",
+  "theme": "classic",
+  "tagline": "Clean cuts.\nOld-fashioned care.",
+  "about": "A neighborhood barbershop on Chain Bridge Road in Oakton. Customers praise the careful, well-balanced cuts, fair pricing, and a staff that greets everyone who walks in.",
+  "phone": "(703) 281-7700",
+  "address": "2960 Chain Bridge Rd #104, Oakton, VA 22124",
+  "city": "Oakton, VA",
+  "locationNote": "Walk-ins welcome · Call ahead on busy days",
+  "themeCopy": {
+    "icon": "✂",
+    "kicker": "Barbering in Oakton",
+    "services": "A cut above.",
+    "story": "Sharp cuts.\nA warm welcome.",
+    "closing": "Your next fresh cut.",
+    "label": "Haircuts, done with care",
+    "gallery": "Inside Oakton Barber."
+  },
+  "services": [
+    {
+      "name": "Men's haircuts"
+    },
+    {
+      "name": "Kids' haircuts"
+    },
+    {
+      "name": "Beard trims"
+    },
+    {
+      "name": "Razor shaves"
+    },
+    {
+      "name": "Women's cuts & styling"
+    },
+    {
+      "name": "Brow waxing"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "George B.",
+      "text": "Then walk out with what could be the best haircut in the DMV. Good, clean, old fashioned service, well managed, with fair pricing, and run by quality oriented staff."
+    },
+    {
+      "author": "Oliver C.",
+      "text": "I’ve been coming here for 3 years now, and it’s definitely for a reason. The staff here is nothing but nice, they’re always willing to have conversations."
+    },
+    {
+      "author": "Vince T.",
+      "text": "At the end, he made sure I liked all the angles and even gave me a hot towel and nice massage. Would definitely recommend."
+    }
+  ],
+  "photoAlts": [
+    "Oakton Barber storefront sign on Chain Bridge Road",
+    "Oakton Barber Shop price board for men's and women's services"
+  ],
+  "demo": true,
+  "hours": {
+    "Monday": "9 AM–7 PM",
+    "Tuesday": "9 AM–7 PM",
+    "Wednesday": "9 AM–7 PM",
+    "Thursday": "9 AM–7 PM",
+    "Friday": "9 AM–7 PM",
+    "Saturday": "9 AM–6 PM",
+    "Sunday": "9 AM–5 PM"
+  },
+  "rating": 4.8,
+  "reviewCount": 509,
+  "maps_url": "https://www.google.com/maps/place/OAKTON+BARBER+SHOP/data=!4m7!3m6!1s0x89b649c2685dab0d:0x20dbc9733c344b9!8m2!3d38.8804921!4d-77.3025112!16s%2Fg%2F11k042_g38!19sChIJDatdaMJJtokRuUTDM5e8DQI",
+  "mapsQuery": "Oakton Barber Shop, 2960 Chain Bridge Rd #104, Oakton, VA 22124",
+  "outreachName": "Oakton Barber Shop",
+  "outreachPraise": "your detailed haircuts and friendly staff",
+  "photos": [
+    "img/photo-1.jpg",
+    "img/photo-2.jpg"
+  ]
+}
